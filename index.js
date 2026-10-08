@@ -13,7 +13,8 @@
     xhr.send();
     //return the response as text
     const txt = xhr.responseText;
-    URL.revokeObjectURL(txt);
+    URL.revokeObjectURL(url);
+    return txt;
   };
   // test 
   const helloWorlBlob = new Blob(['Hello World']);
