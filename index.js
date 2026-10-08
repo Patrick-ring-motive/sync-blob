@@ -12,7 +12,8 @@
     // execute the "network" request
     xhr.send();
     //return the response as text
-    return xhr.responseText;
+    const txt = xhr.responseText;
+    URL.revokeObjectURL(txt);
   };
   // test 
   const helloWorlBlob = new Blob(['Hello World']);
